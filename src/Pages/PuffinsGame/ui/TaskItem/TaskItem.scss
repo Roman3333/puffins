@@ -6,7 +6,6 @@
   background-color: $colorWhite;
   border-radius: 16px;
   position: relative;
-  overflow: hidden;
 
   &__img {
     margin: 12px 0 12px 22px;
@@ -58,6 +57,7 @@
     gap: 20px;
     align-items: flex-end;
     background-color: $colorDarkGreen;
+    border-radius: 8px;
   }
 
   &__items {
