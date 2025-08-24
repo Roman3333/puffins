@@ -1,0 +1,14 @@
+.section-puffins__bg {
+  min-height: 100vh;
+  background-image: url('/images/auth-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-puffins__wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

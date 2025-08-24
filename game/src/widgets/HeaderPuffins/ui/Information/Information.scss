@@ -1,0 +1,95 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-information {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  position: relative;
+
+  &__left {
+    min-width: 132px;
+    height: 50px;
+    padding: 4px 13px;
+    display: flex;
+    align-items: center;
+    background: $colorLightGreen;
+    background-image: url('/images/bg-fish.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+  }
+
+  &__count {
+    margin-left: auto;
+    padding-left: 56px;
+  }
+
+  &__count,
+  &__name {
+    color: $colorWhite;
+    font-family: $fontRowdies;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    -webkit-text-stroke-color: $colorMiddleGreen;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorMiddleGreen;
+    text-stroke-width: 1px;
+  }
+
+  &__right {
+    min-width: 266px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    background: $colorLightGreen;
+    background-image: url('/images/eclipses.png');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid $colorMiddleGreen;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    padding-top: 2px;
+  }
+
+  &__name {
+    margin-left: 28px;
+  }
+
+  &__lvl {
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontMontserrat;
+    color: $colorWhite;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: 100%;
+    background-color: $colorMiddleGreen;
+    position: relative;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  &__line {
+    width: 160px;
+    height: 15px;
+    margin-left: -6px;
+    overflow: hidden;
+    border: 1px solid #999999;
+    border-radius: 20px;
+    background-color: $colorMiddleGreen !important;
+  }
+}

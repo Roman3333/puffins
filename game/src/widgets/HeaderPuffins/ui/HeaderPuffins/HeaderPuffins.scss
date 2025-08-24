@@ -1,0 +1,17 @@
+.header-puffins {
+  position: fixed;
+  top: 24px;
+  width: 100%;
+  z-index: 20;
+  transition: all 0.3s;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wrapper-link {
+    display: flex;
+  }
+}

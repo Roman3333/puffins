@@ -1,0 +1,246 @@
+@use '@/app/Vars.scss' as *;
+
+.button-puffins {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: $colorWhite;
+
+  &.primary {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 12px;
+
+    &:active {
+      background-color: var(--dark-blue);
+    }
+  }
+
+  &.x,
+  &.discord {
+    width: 434px;
+    height: 72px;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 24px;
+    -webkit-text-stroke-width: 0.4px;
+    text-stroke-width: 0.4px;
+
+    span {
+      width: calc(100% - 144px);
+      height: 100%;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      border-radius: 24px 0 0 24px;
+      line-height: 24px;
+      position: relative;
+      transition: all 0.3s;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -34px;
+        width: 34px;
+        height: 100%;
+        clip-path: polygon(100% 0, 0 0, 0% 100%);
+        transition: all 0.3s;
+      }
+    }
+
+    svg {
+      margin-right: 24px;
+    }
+  }
+
+  &.x {
+    background-color: $colorDarkGrey;
+    border-bottom: 4px solid $colorDarkGrey;
+    -webkit-text-stroke-color: $colorDarkGrey;
+    text-stroke-color: $colorDarkGrey;
+
+    span {
+      background-color: $colorMiddleGrey;
+
+      &::after {
+        background: $colorMiddleGrey;
+      }
+    }
+
+    &:hover {
+      background-color: $colorMiddleGrey;
+      border-bottom: 4px solid $colorMiddleGrey;
+
+      span {
+        background-color: rgba($colorDarkGrey, 0.8);
+
+        &::after {
+          background-color: rgba($colorDarkGrey, 0.8);
+        }
+      }
+    }
+  }
+
+  &.discord {
+    background-color: $colorMiddleBlue;
+    border-bottom: 4px solid $colorMiddleBlue;
+    -webkit-text-stroke-color: $colorMiddleBlue;
+    text-stroke-color: $colorMiddleBlue;
+
+    span {
+      background-color: $colorLightBlue;
+
+      &::after {
+        background: $colorLightBlue;
+      }
+    }
+
+    &:hover {
+      background-color: $colorLightBlue;
+      border-bottom: 4px solid $colorLightBlue;
+
+      span {
+        background-color: rgba($colorMiddleBlue, 0.8);
+
+        &::after {
+          background-color: rgba($colorMiddleBlue, 0.8);
+        }
+      }
+    }
+  }
+
+  &.join {
+    max-width: 451px;
+    width: 100%;
+    padding: 13px 20px;
+    background-color: $colorNeutralBlue;
+    border: 1px solid $colorEasyBlue;
+    border-radius: 12px;
+  }
+
+  &.orange {
+    height: 34px;
+    padding: 0 8px;
+    gap: 8px;
+    border-radius: 10px;
+    background-color: $colorEasyOrange;
+    border: 1px solid $colorMiddleOrange;
+    -webkit-text-stroke-color: $colorMiddleOrange;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorMiddleOrange;
+    text-stroke-width: 1px;
+  }
+
+  &.complete {
+    max-width: 188px;
+    width: 100%;
+    padding: 6px 16px;
+    background-color: $colorCyanBlue;
+    border: 2px solid $colorSkyBlue;
+    -webkit-text-stroke-color: $colorMiddleOrange;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorMiddleOrange;
+    text-stroke-width: 1px;
+    border-radius: 12px;
+  }
+
+  &.drip {
+    padding: 6px 16px;
+    border-radius: 12px;
+  }
+
+  &.drip,
+  &.open,
+  &.ciose {
+    background-color: $colorCyanBlue;
+    border: 2px solid $colorSkyBlue;
+    -webkit-text-stroke-color: $colorCinkBlue;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorCinkBlue;
+    text-stroke-width: 1px;
+  }
+
+  &.claim,
+  &.follow,
+  &.connect,
+  &.open,
+  &.ciose {
+    max-width: 228px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+  }
+
+  &.claim {
+    background-color: $colorMiddleYellow;
+    border: 2px solid $colorLightYellow;
+    -webkit-text-stroke-color: $colorDarkYellow;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorDarkYellow;
+    text-stroke-width: 1px;
+  }
+
+  &.follow {
+    background-color: $colorMiddleSkyBlue;
+    border: 2px solid $colorLightSkyBlue;
+    -webkit-text-stroke-color: $colorDarkSkyBlue;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorDarkSkyBlue;
+    text-stroke-width: 1px;
+  }
+
+  &.connect {
+    background-color: $colorBrightGreen;
+    border: 2px solid $colorMintGreen;
+    -webkit-text-stroke-color: $colorDeepGreen;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorDeepGreen;
+    text-stroke-width: 1px;
+  }
+
+  &.img {
+    border-radius: 24px;
+  }
+
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.s {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &.m {
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  &.l {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &.rowdies {
+    font-family: $fontRowdies;
+  }
+
+  &.play-story {
+    font-family: $fontPlayStory;
+  }
+
+  &.loading {
+    font-family: $fontRowdies;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}

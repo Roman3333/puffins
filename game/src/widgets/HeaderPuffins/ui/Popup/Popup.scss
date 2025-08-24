@@ -1,0 +1,150 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-popap {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  height: 225px;
+  max-width: 345px;
+  width: 100%;
+  padding: 0 18px 18px 0;
+  transition: all 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -5;
+  background-size: cover;
+  background-size: 225px;
+  background: $colorLightGreen;
+  background-image: url('/images/eclipses-popup.png');
+  border-bottom: 4px solid $colorMiddleGreen;
+  border-left: 2px solid $colorMiddleGreen;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &.active {
+    top: 88px;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 5;
+  }
+
+  &__top {
+    display: flex;
+  }
+
+  &__name {
+    color: $colorWhite;
+    font-family: $fontRowdies;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    -webkit-text-stroke-color: $colorMiddleGreen;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorMiddleGreen;
+    text-stroke-width: 1px;
+  }
+
+  &__stat {
+    padding-top: 10px;
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__items {
+    margin-top: 11px;
+    display: flex;
+    gap: 12px;
+  }
+
+  &__item {
+    width: 108px;
+    height: 40px;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    background-color: rgba($colorMiddleGreen, 0.7);
+    color: $colorWhite;
+    font-weight: 700;
+    border-radius: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__count {
+    font-family: $fontRowdies;
+  }
+
+  &__xp {
+    font-family: $fontRowdies;
+    font-size: 20px;
+    -webkit-text-stroke-color: $colorBlackGreen;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorBlackGreen;
+    text-stroke-width: 1px;
+  }
+
+  &__bottom {
+    margin-top: 22px;
+    padding: 0 18px 0 21px;
+  }
+
+  &__bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+
+  &__bottom-text {
+    font-weight: 700;
+    color: $colorWhite;
+    font-family: $fontRowdies;
+    font-size: 24px;
+    line-height: 30px;
+    -webkit-text-stroke-color: $colorMiddleGreen;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-color: $colorMiddleGreen;
+    text-stroke-width: 1px;
+  }
+
+  &__bottom-links {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__bottom-link {
+    width: 42px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    &:first-child {
+      background-color: $colorDarkGrey;
+
+      &:hover {
+        background-color: $colorMiddleGrey;
+      }
+    }
+
+    &:last-child {
+      background-color: $colorMiddleBlue;
+
+      &:hover {
+        background-color: $colorLightBlue;
+      }
+    }
+  }
+
+  &__bottom-btn {
+    margin-left: auto;
+  }
+}

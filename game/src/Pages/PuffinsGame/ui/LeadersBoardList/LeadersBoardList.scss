@@ -1,0 +1,26 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-leaderboards {
+  &__top {
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/eclipses-leaderboard.png');
+    background-color: $colorBabyBlue;
+    border-bottom: 4px solid $colorDarkBlue;
+    border-radius: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__suptitles {
+    height: 60px;
+    margin-top: -12px;
+    padding: 8px 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $colorBabyBlue;
+  }
+}

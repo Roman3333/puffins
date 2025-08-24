@@ -1,0 +1,87 @@
+import { useState } from 'react';
+import clsx from 'clsx';
+import { Title, ButtonPuffin, CheckboxPuffin } from '@/shared/ui';
+import { TaskItemProps } from './types';
+import './TaskItem.scss';
+
+export const TaskItem = (props: TaskItemProps) => {
+  const { id, img, name, title, text, coins, xp, type, isLocked, isFollow } = props;
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleAction = async () => {
+    try {
+      if (isLocked) return;
+
+      alert(id);
+    } catch (e: any) {
+      console.log(e);
+    }
+  };
+
+  return (
+    <div
+      className={clsx('puffins-task', {
+        disabled: isLocked,
+      })}
+    >
+      <img
+        className="puffins-task__img"
+        src={img}
+        width={104}
+        height={104}
+        alt={`${name} img`}
+      />
+
+      <div className="puffins-task__content">
+        <span className="puffins-task__name">{name}</span>
+
+        <Title
+          className="puffins-task__title"
+          type="h3"
+          variant="third"
+          size="xm"
+          font="montserrat"
+        >
+          {title}
+        </Title>
+
+        <div className="puffins-task__item">
+          {isFollow && (
+            <CheckboxPuffin
+              checked={isChecked}
+              onCheckedChange={() => setIsChecked(!isChecked)}
+            />
+          )}
+          <p className="puffins-task__text">{text}</p>
+        </div>
+      </div>
+
+      <div className="puffins-task__stat">
+        <div className="puffins-popap__items">
+          <div className="puffins-popap__item">
+            <img src="/images/fish-coin.png" width={28} height={28} alt="Fish" />
+            <span className="puffins-popap__count">{`+${coins}`}</span>
+          </div>
+
+          <div className="puffins-popap__item">
+            <span className="puffins-popap__xp">XP</span>
+            <span className="puffins-popap__count">{`+${xp}`}</span>
+          </div>
+        </div>
+
+        <ButtonPuffin weight="bold" variant={type} onClick={handleAction}>
+          {type}
+        </ButtonPuffin>
+      </div>
+
+      {isLocked && (
+        <div className="puffins-task__locked">
+          <img src="/images/lock.png" width={40} height={57} alt="Lock" />
+          <p className="puffins-task__locked-text">
+            Please link your Twitter / X and Discord accounts to continue.
+          </p>
+        </div>
+      )}
+    </div>
+  );
+};

@@ -1,0 +1,88 @@
+@use '@/app/Vars.scss' as *;
+
+.puffin-title {
+  &.s {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &.xs {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &.xm {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &.m {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  &.l {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  &.x {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  &.xl {
+    font-size: 44px;
+    line-height: 55px;
+  }
+
+  &.primary {
+    color: $colorWhite;
+  }
+
+  &.secondary {
+    color: $colorLightGrey;
+  }
+
+  &.third {
+    color: $colorBlack;
+  }
+
+  &.danger {
+    color: $colorMiddleRed;
+  }
+
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.montserrat {
+    font-family: $fontMontserrat;
+  }
+
+  &.rowdies {
+    font-family: $fontRowdies;
+  }
+
+  &.play-story {
+    font-family: $fontPlayStory;
+  }
+
+  &.green {
+    -webkit-text-stroke-color: $colorMiddleGreen;
+    -webkit-text-stroke-width: 2px;
+    text-stroke-color: $colorMiddleGreen;
+    text-stroke-width: 2px;
+  }
+
+  &.blue {
+    -webkit-text-stroke-color: $colorDarkBlue;
+    -webkit-text-stroke-width: 2px;
+    text-stroke-color: $colorDarkBlue;
+    text-stroke-width: 2px;
+  }
+}
