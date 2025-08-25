@@ -5,25 +5,27 @@ import { TaskItemProps } from './types';
 import './TaskItem.scss';
 
 export const TaskItem = (props: TaskItemProps) => {
-  const { id, img, name, title, text, coins, xp, type, isLocked, isFollow } = props;
-  const [isChecked, setIsChecked] = useState(false);
+  const { id, img, name, title, steps, coins, xp, type, isLocked } = props;
+  const [checkedSteps, setCheckedSteps] = useState<string[]>([]);
 
   const handleAction = async () => {
-    try {
-      if (isLocked) return;
+    if (isLocked) return;
 
-      alert(id);
-    } catch (e: any) {
-      console.log(e);
+    try {
+      console.log(checkedSteps, id);
+    } catch (error) {
+      console.log(error);
     }
   };
 
+  const toggleStep = (stepId: string) => {
+    setCheckedSteps((prev) =>
+      prev.includes(stepId) ? prev.filter((s) => s !== stepId) : [...prev, stepId]
+    );
+  };
+
   return (
-    <div
-      className={clsx('puffins-task', {
-        disabled: isLocked,
-      })}
-    >
+    <div className={clsx('puffins-task', { disabled: isLocked })}>
       <img
         className="puffins-task__img"
         src={img}
@@ -45,14 +47,18 @@ export const TaskItem = (props: TaskItemProps) => {
           {title}
         </Title>
 
-        <div className="puffins-task__item">
-          {isFollow && (
-            <CheckboxPuffin
-              checked={isChecked}
-              onCheckedChange={() => setIsChecked(!isChecked)}
-            />
-          )}
-          <p className="puffins-task__text">{text}</p>
+        <div className="puffins-task__steps">
+          {steps.map((step) => (
+            <div key={step.id} className="puffins-task__item">
+              {steps.length > 1 && (
+                <CheckboxPuffin
+                  checked={checkedSteps.includes(step.id)}
+                  onCheckedChange={() => toggleStep(step.id)}
+                />
+              )}
+              <p className="puffins-task__text">{step.title}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -62,7 +68,6 @@ export const TaskItem = (props: TaskItemProps) => {
             <img src="/images/fish-coin.png" width={28} height={28} alt="Fish" />
             <span className="puffins-popap__count">{`+${coins}`}</span>
           </div>
-
           <div className="puffins-popap__item">
             <span className="puffins-popap__xp">XP</span>
             <span className="puffins-popap__count">{`+${xp}`}</span>

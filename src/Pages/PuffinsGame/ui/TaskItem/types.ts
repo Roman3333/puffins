@@ -1,11 +1,20 @@
+export interface Step {
+  id: string;
+  step_index: number;
+  title: string;
+  description: string | null;
+  type: string;
+  step_metadata: Record<string, any>;
+}
+
 export interface TaskItemProps {
   id: number;
   img: string;
   name: string;
   title: string;
-  text: string;
   coins: number;
   xp: number;
+  steps: Step[];
   /**
    * Тип кнопки.
    */
@@ -14,8 +23,4 @@ export interface TaskItemProps {
    * Флаг, заблокирована ли карточка.
    */
   isLocked: boolean;
-  /**
-   *Флаг, должен ли появиться чекбокс.
-   */
-  isFollow: boolean;
 }
