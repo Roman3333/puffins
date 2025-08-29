@@ -119,6 +119,10 @@
     background-color: $colorNeutralBlue;
     border: 1px solid $colorEasyBlue;
     border-radius: 12px;
+
+    &:hover {
+      background-color: $colorBabyBlue;
+    }
   }
 
   &.orange {
@@ -128,78 +132,34 @@
     border-radius: 10px;
     background-color: $colorEasyOrange;
     border: 1px solid $colorMiddleOrange;
-    -webkit-text-stroke-color: $colorMiddleOrange;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorMiddleOrange;
-    text-stroke-width: 1px;
+
+    &:hover {
+      background-color: $colorDarkYellow;
+    }
   }
 
   &.complete {
     max-width: 188px;
     width: 100%;
     padding: 6px 16px;
-    background-color: $colorCyanBlue;
-    border: 2px solid $colorSkyBlue;
-    -webkit-text-stroke-color: $colorMiddleOrange;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorMiddleOrange;
-    text-stroke-width: 1px;
+    background-color: $colorNeutralBlue;
     border-radius: 12px;
+
+    &:hover {
+      background-color: $colorBabyBlue;
+    }
   }
 
   &.drip {
     padding: 6px 16px;
     border-radius: 12px;
-  }
-
-  &.drip,
-  &.open,
-  &.ciose {
-    background-color: $colorCyanBlue;
-    border: 2px solid $colorSkyBlue;
-    -webkit-text-stroke-color: $colorCinkBlue;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorCinkBlue;
-    text-stroke-width: 1px;
-  }
-
-  &.claim,
-  &.follow,
-  &.connect,
-  &.open,
-  &.ciose {
-    max-width: 228px;
-    width: 100%;
-    padding: 8px;
-    border-radius: 12px;
     text-transform: uppercase;
-  }
+    border-radius: 12px;
+    background-color: $colorNeutralBlue;
 
-  &.claim {
-    background-color: $colorMiddleYellow;
-    border: 2px solid $colorLightYellow;
-    -webkit-text-stroke-color: $colorDarkYellow;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorDarkYellow;
-    text-stroke-width: 1px;
-  }
-
-  &.follow {
-    background-color: $colorMiddleSkyBlue;
-    border: 2px solid $colorLightSkyBlue;
-    -webkit-text-stroke-color: $colorDarkSkyBlue;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorDarkSkyBlue;
-    text-stroke-width: 1px;
-  }
-
-  &.connect {
-    background-color: $colorBrightGreen;
-    border: 2px solid $colorMintGreen;
-    -webkit-text-stroke-color: $colorDeepGreen;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorDeepGreen;
-    text-stroke-width: 1px;
+    &:hover {
+      background-color: $colorBabyBlue;
+    }
   }
 
   &.img {

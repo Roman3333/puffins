@@ -71,18 +71,4 @@
   &.play-story {
     font-family: $fontPlayStory;
   }
-
-  &.green {
-    -webkit-text-stroke-color: $colorMiddleGreen;
-    -webkit-text-stroke-width: 2px;
-    text-stroke-color: $colorMiddleGreen;
-    text-stroke-width: 2px;
-  }
-
-  &.blue {
-    -webkit-text-stroke-color: $colorDarkBlue;
-    -webkit-text-stroke-width: 2px;
-    text-stroke-color: $colorDarkBlue;
-    text-stroke-width: 2px;
-  }
 }

@@ -33,7 +33,6 @@ export const Modal = (props: ModalProps) => {
             className={clsx('puffins-modal__title', className)}
             type="h3"
             size={sizeTitle}
-            stroke="green"
           >
             {title}
           </Title>

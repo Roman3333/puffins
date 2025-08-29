@@ -74,7 +74,12 @@ export const TaskItem = (props: TaskItemProps) => {
           </div>
         </div>
 
-        <ButtonPuffin weight="bold" variant={type} onClick={handleAction}>
+        <ButtonPuffin
+          className="puffins-task__btn"
+          weight="bold"
+          variant="drip"
+          onClick={handleAction}
+        >
           {type}
         </ButtonPuffin>
       </div>

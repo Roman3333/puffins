@@ -46,8 +46,6 @@
 
 .puffins-modal__top {
   background: $colorLightGreen;
-  background-image: url('/images/eclipses.png');
-  border-bottom: 8px solid $colorMiddleGreen;
 
   &.xl {
     padding: 24px;
@@ -69,7 +67,7 @@
   right: 16px;
 
   &:hover .puffins-modal__cross {
-    color: $colorLightGreen;
+    color: $colorMiddleGreen;
   }
 }
 

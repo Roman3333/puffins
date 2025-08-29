@@ -8,20 +8,27 @@
 
   &__left {
     min-width: 132px;
-    height: 50px;
-    padding: 4px 13px;
+    height: 46px;
     display: flex;
     align-items: center;
-    background: $colorLightGreen;
-    background-image: url('/images/bg-fish.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 16px;
+    gap: 12px;
+    justify-content: space-between;
+    background: rgba($colorWhite, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__fish {
+    padding: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($colorWhite, 0.35);
+    border-radius: 0 100px 100px 0;
   }
 
   &__count {
-    margin-left: auto;
-    padding-left: 56px;
+    padding-right: 8px;
   }
 
   &__count,
@@ -31,10 +38,6 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    -webkit-text-stroke-color: $colorMiddleGreen;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorMiddleGreen;
-    text-stroke-width: 1px;
   }
 
   &__right {
@@ -42,11 +45,7 @@
     height: 68px;
     display: flex;
     align-items: center;
-    background: $colorLightGreen;
-    background-image: url('/images/eclipses.png');
-    background-size: cover;
-    background-position: center;
-    border-bottom: 4px solid $colorMiddleGreen;
+    background: rgba($colorWhite, 0.2);
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
@@ -61,7 +60,7 @@
   }
 
   &__lvl {
-    margin-left: -15px;
+    margin-left: -7px;
     display: flex;
     align-items: center;
   }
@@ -80,7 +79,7 @@
     border-radius: 100%;
     background-color: $colorMiddleGreen;
     position: relative;
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba($colorWhite, 0.4);
   }
 
   &__line {
@@ -90,6 +89,5 @@
     overflow: hidden;
     border: 1px solid #999999;
     border-radius: 20px;
-    background-color: $colorMiddleGreen !important;
   }
 }

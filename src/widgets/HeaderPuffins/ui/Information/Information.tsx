@@ -11,6 +11,9 @@ export const Information = () => {
   return (
     <div className="puffins-information">
       <div className="puffins-information__left">
+        <div className="puffins-information__fish">
+          <img src="/images/fish-coin.png" width={28} height={28} alt="Avatar" />
+        </div>
         <div className="puffins-information__count">{'2800'}</div>
       </div>
 
@@ -19,7 +22,7 @@ export const Information = () => {
         className="puffins-information__right"
         onClick={() => setIsOpenPopup(!isOpenPopup)}
       >
-        <img src="/images/avatar-header.png" width={70} height={64} alt="Avatar" />
+        <img src="/images/avatar-header.png" width={64} height={68} alt="Avatar" />
 
         <div className="puffins-information__wrapper">
           <span className="puffins-information__name">{'Dmitry CH'}</span>

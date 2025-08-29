@@ -11,7 +11,6 @@ export const Title = (props: TitleProps) => {
     variant = 'primary',
     weight = 'bold',
     font = 'rowdies',
-    stroke = '',
     className,
     ...rest
   } = props;
@@ -19,7 +18,7 @@ export const Title = (props: TitleProps) => {
 
   return (
     <Tag
-      className={clsx('puffin-title', size, variant, weight, font, stroke, className)}
+      className={clsx('puffin-title', size, variant, weight, font, className)}
       {...rest}
     >
       {children}

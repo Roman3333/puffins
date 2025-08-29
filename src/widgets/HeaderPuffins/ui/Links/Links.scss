@@ -2,11 +2,8 @@
 
 .puffins-links {
   padding: 4px 13px;
-  background: $colorLightGreen;
-  background-image: url('/images/eclipses.png');
-  background-size: cover;
-  border-bottom: 5px solid $colorMiddleGreen;
   border-radius: 12px;
+  background: rgba($colorWhite, 0.2);
 
   &__ul {
     display: flex;
@@ -24,16 +21,12 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
-    background-color: transparent;
-    -webkit-text-stroke-color: $colorMiddleGreen;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorMiddleGreen;
-    text-stroke-width: 1px;
+    background: transparent;
     text-transform: uppercase;
     border-radius: 12px;
 
     &:hover {
-      background-color: $colorNeutralGreen;
+      background: rgba($colorWhite, 0.1);
     }
   }
 }

@@ -146,7 +146,7 @@ export const TasksList = () => {
   return (
     <>
       <div className="puffin-tasks__top">
-        <Title type="h1" size="x" stroke="green">
+        <Title type="h1" size="x">
           PUFFIN TASK
         </Title>
       </div>

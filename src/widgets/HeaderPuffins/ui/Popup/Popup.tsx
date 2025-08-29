@@ -64,14 +64,11 @@ export const Popup = (props: PopupProps) => {
             >
               <Discord width={26} height={26} />
             </Link>
+
+            <ButtonPuffin variant="orange" weight="bold">
+              <Settings />
+            </ButtonPuffin>
           </div>
-          <ButtonPuffin
-            className="puffins-popap__bottom-btn"
-            variant="orange"
-            weight="bold"
-          >
-            <Settings />
-          </ButtonPuffin>
         </div>
 
         <div className="puffins-popap__bottom-item">

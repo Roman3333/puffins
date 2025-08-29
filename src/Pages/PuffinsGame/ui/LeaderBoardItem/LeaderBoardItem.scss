@@ -6,18 +6,14 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  border-bottom: 2px solid $colorLiGrey;
 
   &:first-child {
-    margin: 4px 0;
-    background-color: $colorRoyalBlue;
-  }
+    margin-bottom: 4px;
 
-  &:nth-child(2n) {
-    background-color: rgba($colorIndigoBlue, 0.7);
-  }
-
-  &:nth-child(2n + 1):not(:first-child) {
-    background-color: rgba($colorIndigoBlue, 0.8);
+    .puffins-leader__lvl {
+      background-color: $colorMiddleGreen;
+    }
   }
 
   &__rank {
@@ -28,14 +24,10 @@
     font-size: 24px;
     color: $colorWhite;
     font-family: $fontRowdies;
-    -webkit-text-stroke-color: $colorNavyBlue;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorNavyBlue;
-    text-stroke-width: 1px;
   }
 
   &__info {
-    width: 166px;
+    width: 174px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -64,7 +56,7 @@
     border-radius: 100%;
     font-weight: 800;
     color: $colorWhite;
-    background-color: $colorMiddleGreen;
+    background-color: transparent;
     border-right: 1.2px solid rgba(255, 255, 255, 0.6);
   }
 
@@ -79,10 +71,6 @@
     line-height: 20px;
     color: $colorWhite;
     font-family: $fontRowdies;
-    -webkit-text-stroke-color: $colorNavyBlue;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: $colorNavyBlue;
-    text-stroke-width: 1px;
   }
 
   &__link {
@@ -102,9 +90,5 @@
     text-align: end;
     color: $colorWhite;
     font-family: $fontRowdies;
-    -webkit-text-stroke-color: $colorNavyBlue;
-    -webkit-text-stroke-width: 2px;
-    text-stroke-color: $colorNavyBlue;
-    text-stroke-width: 2px;
   }
 }

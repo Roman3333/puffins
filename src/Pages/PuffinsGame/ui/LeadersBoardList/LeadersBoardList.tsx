@@ -8,7 +8,7 @@ const items = [
     id: 1,
     rank: 55,
     avatar: '/images/avatar-card.png',
-    name: 'dmidtry ch',
+    name: 'Dmidtry Chaffy',
     lvl: 5,
     link: 'https://www.youtube.com/watch?v=o_1aF54DO60',
     coins: 20000,
@@ -17,7 +17,7 @@ const items = [
     id: 2,
     rank: 1,
     avatar: '/images/avatar-card.png',
-    name: 'dmitry chfg',
+    name: 'Dmidtry Chaffy',
     lvl: 12,
     link: 'https://www.youtube.com/watch?v=o_1aF54DO60',
     coins: 10000,
@@ -26,7 +26,7 @@ const items = [
     id: 3,
     rank: 2,
     avatar: '/images/avatar-card.png',
-    name: 'dmitry ch',
+    name: 'Dmidtry Chaffy',
     lvl: 12,
     link: 'https://www.youtube.com/watch?v=o_1aF54DO60',
     coins: 10000,
@@ -85,20 +85,45 @@ const items = [
     link: 'https://www.youtube.com/watch?v=o_1aF54DO60',
     coins: 10000,
   },
+  {
+    id: 10,
+    rank: 23,
+    avatar: '/images/avatar-card.png',
+    name: 'dmitdfry chgg',
+    lvl: 12,
+    link: 'https://www.youtube.com/watch?v=o_1aF54DO60',
+    coins: 10,
+  },
+  {
+    id: 11,
+    rank: 53,
+    avatar: '/images/avatar-card.png',
+    name: 'dmitdfry ffastetwevevw',
+    lvl: 16,
+    link: 'https://www.youtube.com/watch?v=o_1aF54DO60',
+    coins: 5000,
+  },
+  {
+    id: 12,
+    rank: 15,
+    avatar: '/images/avatar-card.png',
+    name: 'dmitdfry chgg',
+    lvl: 15,
+    link: 'https://www.youtube.com/watch?v=o_1aF54DO60',
+    coins: 30000,
+  },
 ];
 
 export const LeadersBoardList = () => {
   return (
     <div className="puffins-leaderboards">
       <div className="puffins-leaderboards__top">
-        <Title size="x" stroke="blue">
-          LEADERBOARD
-        </Title>
+        <Title size="x">LEADERBOARD</Title>
       </div>
 
       <div className="puffins-leaderboards__suptitles">
         {titles.map((item) => (
-          <Title key={item} type="h3" size="xs" stroke="blue">
+          <Title key={item} type="h3" size="xs">
             {item}
           </Title>
         ))}

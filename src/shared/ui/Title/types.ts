@@ -29,10 +29,6 @@ export interface TitleProps extends THeading {
    */
   weight?: 'regular' | 'bold';
   /**
-   * Обводка(border) title, по умолчанию нету.
-   */
-  stroke?: 'green' | 'blue';
-  /**
    * Кастомный класс для title.
    */
   className?: string;
