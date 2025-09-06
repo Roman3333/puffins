@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Title, ButtonPuffin } from '@/shared/ui';
 import './Banner.scss';
 
@@ -5,14 +6,16 @@ export const Banner = () => {
   return (
     <div className="puffin-banner">
       <Title size="m" font="montserrat">
-        Task title
+        Puffin Rush
       </Title>
 
-      <p className="puffin-banner__text">Follow us on X for the latest news. Be early!</p>
+      <p className="puffin-banner__text">Will you manage to land?</p>
 
-      <ButtonPuffin size="m" variant="join">
-        JOIN
-      </ButtonPuffin>
+      <Link to="/rush" className="puffin-banner__link">
+        <ButtonPuffin size="m" variant="join">
+          LETS GOOOOOOO
+        </ButtonPuffin>
+      </Link>
     </div>
   );
 };

@@ -18,4 +18,9 @@
     font-size: 19px;
     line-height: 23px;
   }
+
+  &__link {
+    max-width: 451px;
+    display: flex;
+  }
 }

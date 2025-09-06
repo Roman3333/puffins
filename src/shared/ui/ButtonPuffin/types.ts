@@ -48,6 +48,7 @@ export interface ButtonProps
     | 'follow'
     | 'connect'
     | 'open'
+    | 'grats'
     | 'ciose';
   /**
    * Font-family title, по умолчанию rowdies.

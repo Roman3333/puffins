@@ -170,6 +170,13 @@
     }
   }
 
+  &.grats {
+    padding: 8px 20px;
+    background-color: $colorMiddleYellow;
+    border-bottom: 6px solid $colorTransGreen;
+    border-radius: 12px;
+  }
+
   &.danger {
     height: 34px;
     min-width: 40px;

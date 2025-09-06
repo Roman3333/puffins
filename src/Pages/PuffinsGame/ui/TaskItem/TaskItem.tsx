@@ -5,14 +5,15 @@ import { TaskItemProps } from './types';
 import './TaskItem.scss';
 
 export const TaskItem = (props: TaskItemProps) => {
-  const { id, img, name, title, steps, coins, xp, type, isLocked } = props;
+  const { id, img, name, title, steps, coins, xp, type, isLocked, handleOpenGratsModal } =
+    props;
   const [checkedSteps, setCheckedSteps] = useState<string[]>([]);
 
   const handleAction = async () => {
     if (isLocked) return;
 
     try {
-      console.log(checkedSteps, id);
+      handleOpenGratsModal({ id, coins, xp });
     } catch (error) {
       console.log(error);
     }

@@ -2,11 +2,34 @@
 
 .puffins-bonus {
   max-width: 570px;
-  padding: 32px 40px;
+  padding: 32px 40px 40px;
 
   .puffins-modal__top {
     padding: 0;
     border-bottom: none;
+  }
+
+  .puffins-modal__cross {
+    color: $colorTransGreen;
+  }
+
+  .puffins-modal__btn {
+    &:hover .puffins-modal__cross path {
+      fill: $colorWhite;
+    }
+
+    &:after {
+      position: absolute;
+      right: -96px;
+      top: -96px;
+      content: '';
+      width: 160px;
+      height: 160px;
+      background: $colorTransGreen;
+      z-index: -1;
+      transform: rotate(45deg);
+      cursor: initial;
+    }
   }
 
   &__top {
