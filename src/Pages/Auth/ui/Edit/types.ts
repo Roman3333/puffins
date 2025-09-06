@@ -1,4 +1,4 @@
-export interface EdittProps {
+export interface EditProps {
   isConnect: boolean;
   setIsConnect: (isConnect: boolean) => void;
 }

@@ -25,7 +25,7 @@ export interface ButtonProps
   /**
    * Толщина шрифта, по умолчанию regular(400).
    */
-  weight?: 'regular' | 'bold';
+  weight?: 'regular' | 'medium' | 'bold';
   /**
    * Размер шрифта, по умолчанию s(16px).
    */
@@ -40,6 +40,8 @@ export interface ButtonProps
     | 'img'
     | 'join'
     | 'orange'
+    | 'popup'
+    | 'danger'
     | 'complete'
     | 'drip'
     | 'claim'

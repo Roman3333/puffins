@@ -49,7 +49,7 @@ export const TaskItem = (props: TaskItemProps) => {
 
         <div className="puffins-task__steps">
           {steps.map((step) => (
-            <div key={step.id} className="puffins-task__item">
+            <div key={step.id} className="puffins-task__step">
               {steps.length > 1 && (
                 <CheckboxPuffin
                   checked={checkedSteps.includes(step.id)}
@@ -63,14 +63,14 @@ export const TaskItem = (props: TaskItemProps) => {
       </div>
 
       <div className="puffins-task__stat">
-        <div className="puffins-popap__items">
-          <div className="puffins-popap__item">
+        <div className="puffins-task__items">
+          <div className="puffins-task__item">
             <img src="/images/fish-coin.png" width={28} height={28} alt="Fish" />
-            <span className="puffins-popap__count">{`+${coins}`}</span>
+            <span className="puffins-task__count">{`+${coins}`}</span>
           </div>
-          <div className="puffins-popap__item">
-            <span className="puffins-popap__xp">XP</span>
-            <span className="puffins-popap__count">{`+${xp}`}</span>
+          <div className="puffins-task__item">
+            <span className="puffins-task__xp">XP</span>
+            <span className="puffins-task__count">{`+${xp}`}</span>
           </div>
         </div>
 

@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Modal, ButtonPuffin, InputPuffin } from '@/shared/ui';
-import { EdittProps } from './types';
+import { EditProps } from './types';
 import X from '@/shared/assets/svg/x.svg?react';
 import Discord from '@/shared/assets/svg/discord.svg?react';
 import './Edit.scss';
 
-//TODO: доделать потом логику для isUsernameValid, пока всегда true
-export const Edit = (props: EdittProps) => {
+//TODO: доделать потом логику для isUsernameValid с бека, пока всегда true
+export const Edit = (props: EditProps) => {
   const { isConnect, setIsConnect } = props;
   const [username, setUsername] = useState('');
   const [isUsernameValid, setIsUsernameValid] = useState(false);
@@ -45,6 +45,7 @@ export const Edit = (props: EdittProps) => {
     <Modal
       isModalOpen={!isConnect}
       title="EDIT PROFILE"
+      isHideBg={false}
       handlelCloseModal={() => setIsConnect(true)}
     >
       <form className="form-auth" onSubmit={handleSubmit}>

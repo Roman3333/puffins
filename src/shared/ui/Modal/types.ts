@@ -29,4 +29,8 @@ export interface ModalProps {
    * Кастомный класс для title.
    */
   className?: string;
+  /**
+   * Флаг для затемнения bg, по умолчанию true, не затемняем bg только в модалке во время авторизации.
+   */
+  isHideBg?: boolean;
 }

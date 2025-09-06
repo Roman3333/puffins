@@ -12,6 +12,7 @@ export const Modal = (props: ModalProps) => {
     handlelCloseModal,
     title,
     sizeTitle = 'xl',
+    isHideBg = true,
     className,
     wrapperClassname,
   } = props;
@@ -25,7 +26,7 @@ export const Modal = (props: ModalProps) => {
       onRequestClose={handlelCloseModal}
       ariaHideApp={false}
       className={clsx('puffins-modal', wrapperClassname)}
-      overlayClassName={clsx('ReactModal__Overlay', sizeTitle === 'l' && 'fide-bg')}
+      overlayClassName={clsx('ReactModal__Overlay', isHideBg && 'fide-bg')}
     >
       <div className={clsx('puffins-modal__top', sizeTitle)}>
         {title && (
