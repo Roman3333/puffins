@@ -8,6 +8,8 @@ export const TaskItem = (props: TaskItemProps) => {
   const { id, img, name, title, steps, coins, xp, type, isLocked, handleOpenGratsModal } =
     props;
   const [checkedSteps, setCheckedSteps] = useState<string[]>([]);
+  const [showAllSteps, setShowAllSteps] = useState(false);
+  const visibleSteps = showAllSteps ? steps : [steps[0]];
 
   const handleAction = async () => {
     if (isLocked) return;
@@ -26,7 +28,13 @@ export const TaskItem = (props: TaskItemProps) => {
   };
 
   return (
-    <div className={clsx('puffins-task', { disabled: isLocked })}>
+    <div
+      className={clsx('puffins-task', {
+        ['disabled']: isLocked,
+        ['multi']: !isLocked && steps?.length > 1,
+      })}
+      onClick={() => setShowAllSteps((prev) => !prev)}
+    >
       <img
         className="puffins-task__img"
         src={img}
@@ -49,7 +57,7 @@ export const TaskItem = (props: TaskItemProps) => {
         </Title>
 
         <div className="puffins-task__steps">
-          {steps.map((step) => (
+          {visibleSteps.map((step) => (
             <div key={step.id} className="puffins-task__step">
               {steps.length > 1 && (
                 <CheckboxPuffin

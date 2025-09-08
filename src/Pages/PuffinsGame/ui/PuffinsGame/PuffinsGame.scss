@@ -4,15 +4,16 @@
   min-height: 100vh;
   background-image: url('/images/auth-bg.webp');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
 
   &::before {
     content: '';
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(6px);
     background: rgba($colorBlack, 0.75);
   }
 }

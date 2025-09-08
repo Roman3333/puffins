@@ -5,6 +5,11 @@
   background-color: $colorWhite;
   border-radius: 16px;
   position: relative;
+  transition: all 0.3s;
+
+  &.multi {
+    cursor: pointer;
+  }
 
   &__img {
     margin: 16px 0 16px 22px;
