@@ -47,6 +47,7 @@ export interface ButtonProps
     | 'claim'
     | 'follow'
     | 'connect'
+    | 'level'
     | 'open'
     | 'grats'
     | 'ciose';

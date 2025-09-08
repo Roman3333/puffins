@@ -10,7 +10,7 @@ export const PuffinsGame = () => {
     <section className="section-puffins section-puffins__game">
       <div className="container-puffins">
         <div className="puffins-wrapper">
-          <div className="puffins-wrapper__left">
+          <div id="puffins-left" className="puffins-wrapper__left">
             <Banner />
 
             <IncompleteAccount />
@@ -18,7 +18,7 @@ export const PuffinsGame = () => {
             <TasksList />
           </div>
 
-          <div className="puffins-wrapper__right">
+          <div id="puffins-right" className="puffins-wrapper__right">
             <Soon />
 
             <LeadersBoardList />

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import clsx from 'clsx';
 import { ButtonPuffin } from '@/shared/ui';
-import { useOutsideClick } from '../../model/hooks/useOutsideClick';
+import { useOutsideClick } from '@/shared/hooks';
 import { ModalEdit } from '../ModalEdit/ModalEdit';
 import { ModalBonus } from '../ModalBonus/ModalBonus';
 import { PopupProps } from './types';

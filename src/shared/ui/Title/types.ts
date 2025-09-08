@@ -15,7 +15,7 @@ export interface TitleProps extends THeading {
   /**
    * Размер шрифта title, по умолчанию s(20/24).
    */
-  size?: 's' | 'xs' | 'xm' | 'm' | 'l' | 'x' | 'xl';
+  size?: 's' | 'xs' | 'xm' | 'm' | 'l' | 'x' | 'xl' | 'xxl';
   /**
    * Цвет title, по умолчанию primary(белый).
    */

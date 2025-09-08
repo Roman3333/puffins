@@ -116,7 +116,7 @@ const items = [
 
 export const LeadersBoardList = () => {
   return (
-    <div className="puffins-leaderboards">
+    <div id="puffins-leaderboards" className="puffins-leaderboards">
       <div className="puffins-leaderboards__top">
         <Title size="x">LEADERBOARD</Title>
       </div>

@@ -170,11 +170,25 @@
     }
   }
 
+  &.level {
+    border: 1px solid $colorOpacityGreen;
+    background-color: $colorGradeGreen;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $colorTransGreen;
+    }
+  }
+
   &.grats {
     padding: 8px 20px;
     background-color: $colorMiddleYellow;
     border-bottom: 6px solid $colorTransGreen;
     border-radius: 12px;
+
+    &:hover {
+      background-color: $colorLightGreen;
+    }
   }
 
   &.danger {
