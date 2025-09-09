@@ -74,6 +74,10 @@
     font-size: 16px;
     color: $colorWhite;
     font-family: $fontRowdies;
+
+    &.factor {
+      margin: 0 21px 0 auto;
+    }
   }
 
   &__bottom {

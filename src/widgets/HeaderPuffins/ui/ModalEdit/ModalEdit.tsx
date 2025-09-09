@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { validateEmail } from '@/shared/utils';
 import { Modal, ButtonPuffin, InputPuffin } from '@/shared/ui';
 import { ModalEditProps } from './types';
 import X from '@/shared/assets/svg/x.svg?react';
@@ -10,10 +11,13 @@ export const ModalEdit = (props: ModalEditProps) => {
   const { isModalEditOpen, setIsModalEditOpen } = props;
   const [username, setUsername] = useState('');
   const [ref, setRef] = useState('');
+  const [email, setEmail] = useState('');
   const [isUsernameValid, setIsUsernameValid] = useState(false);
   const [isRefValid, setIsRefValid] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
   const [errorUserMessage, setErrorUserMessage] = useState('');
   const [errorRefMessage, setErrorRefMessage] = useState('');
+  const [errorEmailMessage, setErrorEmailMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,15 +43,31 @@ export const ModalEdit = (props: ModalEditProps) => {
         setErrorRefMessage('');
       }
 
+      if (!email.trim()) {
+        setIsEmailValid(false);
+        setErrorEmailMessage('(please enter your email)');
+        isValid = false;
+      } else if (!validateEmail(email)) {
+        setIsEmailValid(false);
+        setErrorEmailMessage('(invalid email address)');
+        isValid = false;
+      } else {
+        setIsEmailValid(true);
+        setErrorEmailMessage('');
+      }
+
       if (!isValid) return;
 
       setIsUsernameValid(true);
       setIsRefValid(true);
+      setIsEmailValid(true);
       setErrorUserMessage('');
       setErrorRefMessage('');
+      setErrorEmailMessage('');
     } catch (error: any) {
       // setErrorUserMessage(error.message);
       // setErrorRefMessage(error.message);
+      // setErrorEmailMessage(error.message)
     }
   };
 
@@ -55,6 +75,7 @@ export const ModalEdit = (props: ModalEditProps) => {
     setIsModalEditOpen(false);
     setErrorRefMessage('');
     setErrorUserMessage('');
+    setErrorEmailMessage('');
   };
 
   useEffect(() => {
@@ -98,6 +119,15 @@ export const ModalEdit = (props: ModalEditProps) => {
             label="Enter NEW Refcode"
             message={errorRefMessage}
           />
+
+          <InputPuffin
+            className="puffins-edit__input"
+            value={email}
+            isValueValid={isEmailValid}
+            onChange={(e) => setEmail(e.target.value)}
+            label="Enter NEW Email"
+            message={errorEmailMessage}
+          />
         </div>
 
         <div className="puffins-edit__btns">
@@ -107,7 +137,7 @@ export const ModalEdit = (props: ModalEditProps) => {
               <X width={56} height={56} />
             </ButtonPuffin>
 
-            <button className="puffins-edit__btns-x">
+            <button className="puffins-edit__btns-x" type="button">
               <Cross className="puffins-edit__btns-icon" />
             </button>
           </div>
@@ -118,7 +148,7 @@ export const ModalEdit = (props: ModalEditProps) => {
               <Discord width={56} height={56} />
             </ButtonPuffin>
 
-            <button className="puffins-edit__btns-discord">
+            <button className="puffins-edit__btns-discord" type="button">
               <Cross className="puffins-edit__btns-icon" />
             </button>
           </div>

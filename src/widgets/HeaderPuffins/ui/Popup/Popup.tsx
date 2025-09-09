@@ -49,7 +49,7 @@ export const Popup = (props: PopupProps) => {
                 }}
               >
                 <span className="puffins-popap__left">Bonus:</span>
-                <span className="puffins-popap__right">{'x1,5'}</span>
+                <span className="puffins-popap__right factor">{'x1,5'}</span>
                 <Arrow />
               </ButtonPuffin>
             </div>

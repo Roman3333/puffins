@@ -2,24 +2,10 @@
 
 .section-puffins__game {
   min-height: 100vh;
-  background-image: url('/images/auth-bg.webp');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(6px);
-    background: rgba($colorBlack, 0.75);
-  }
 }
 
 .puffins-wrapper {
-  padding: 172px 0 40px;
+  padding: 80px 0 40px;
   display: flex;
   gap: 24px;
   position: relative;

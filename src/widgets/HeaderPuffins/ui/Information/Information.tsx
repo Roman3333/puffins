@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { getProgressGradient } from '../../utils/getProgressGradient ';
+import { getProgressGradient } from '../../utils/getProgressGradient';
 import { Popup } from '../Popup/Popup';
 import './Information.scss';
 

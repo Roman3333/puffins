@@ -20,7 +20,7 @@
 
   &__content {
     width: 100%;
-    padding: 26px 14px 14px 12px;
+    padding: 16px 14px 14px 12px;
     color: $colorBlack;
     position: relative;
 
@@ -36,15 +36,8 @@
     }
   }
 
-  &__name {
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 500;
-    font-family: $fontMontserrat;
-  }
-
   &__title {
-    margin: 8px 0;
+    margin: 22.5px 0 8px;
   }
 
   &__steps {
@@ -55,14 +48,14 @@
 
   &__text {
     font-weight: 500;
-    line-height: 20px;
+    line-height: 19px;
     font-family: $fontMontserrat;
   }
 
   &__stat {
     max-width: 310px;
     width: 100%;
-    padding: 9px 22px 20px 14px;
+    padding: 9px 22px 24px 14px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -110,6 +103,7 @@
   &__btn {
     max-width: 228px;
     width: 100%;
+    margin-top: auto;
     padding: 8px;
   }
 

@@ -10,7 +10,6 @@ export interface Step {
 export interface TaskItem {
   id: number;
   img: string;
-  name: string;
   title: string;
   coins: number;
   xp: number;

@@ -1,15 +1,15 @@
 import { useState } from 'react';
+import { MouseEvent } from 'react';
 import clsx from 'clsx';
 import { Title, ButtonPuffin, CheckboxPuffin } from '@/shared/ui';
 import { TaskItemProps } from './types';
 import './TaskItem.scss';
 
 export const TaskItem = (props: TaskItemProps) => {
-  const { id, img, name, title, steps, coins, xp, type, isLocked, handleOpenGratsModal } =
+  const { id, img, title, steps, coins, xp, type, isLocked, handleOpenGratsModal } =
     props;
   const [checkedSteps, setCheckedSteps] = useState<string[]>([]);
   const [showAllSteps, setShowAllSteps] = useState(false);
-  const visibleSteps = showAllSteps ? steps : [steps[0]];
 
   const handleAction = async () => {
     if (isLocked) return;
@@ -27,25 +27,33 @@ export const TaskItem = (props: TaskItemProps) => {
     );
   };
 
+  const handleCardClick = (e: MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+
+    if (target.closest('button')) return;
+
+    if (target.closest('.puffins-task__step input[type="checkbox"]')) return;
+
+    setShowAllSteps((prev) => !prev);
+  };
+
   return (
     <div
       className={clsx('puffins-task', {
         ['disabled']: isLocked,
-        ['multi']: !isLocked && steps?.length > 1,
+        ['multi']: !isLocked && steps?.length > 0,
       })}
-      onClick={() => setShowAllSteps((prev) => !prev)}
+      onClick={handleCardClick}
     >
       <img
         className="puffins-task__img"
         src={img}
         width={104}
         height={104}
-        alt={`${name} img`}
+        alt={`${title} img`}
       />
 
       <div className="puffins-task__content">
-        <span className="puffins-task__name">{name}</span>
-
         <Title
           className="puffins-task__title"
           type="h3"
@@ -57,17 +65,24 @@ export const TaskItem = (props: TaskItemProps) => {
         </Title>
 
         <div className="puffins-task__steps">
-          {visibleSteps.map((step) => (
-            <div key={step.id} className="puffins-task__step">
-              {steps.length > 1 && (
+          {steps.map((step) =>
+            step.description ? (
+              <p key={`${step.id}-desc`} className="puffins-task__text">
+                {step.description}
+              </p>
+            ) : null
+          )}
+
+          {showAllSteps &&
+            steps.map((step) => (
+              <div key={step.id} className="puffins-task__step">
                 <CheckboxPuffin
                   checked={checkedSteps.includes(step.id)}
                   onCheckedChange={() => toggleStep(step.id)}
                 />
-              )}
-              <p className="puffins-task__text">{step.title}</p>
-            </div>
-          ))}
+                <p className="puffins-task__text">{step.title}</p>
+              </div>
+            ))}
         </div>
       </div>
 
