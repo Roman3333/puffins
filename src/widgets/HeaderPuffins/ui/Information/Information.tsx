@@ -22,7 +22,13 @@ export const Information = () => {
         className="puffins-information__right"
         onClick={() => setIsOpenPopup(!isOpenPopup)}
       >
-        <img src="/images/avatar-header.png" width={64} height={68} alt="Avatar" />
+        <img
+          src="/images/avatar-header.png"
+          width={64}
+          height={68}
+          alt="Avatar"
+          className="puffins-information__avatar"
+        />
 
         <div className="puffins-information__wrapper">
           <span className="puffins-information__name">{'Dmitry CH'}</span>

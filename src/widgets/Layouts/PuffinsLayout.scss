@@ -3,7 +3,7 @@
 .puffins-layout {
   position: relative;
 
-  &--with-bg {
+  &--puffins-bg {
     background-image: url('/images/auth-bg.webp');
     background-size: cover;
     background-position: center top;
@@ -17,5 +17,13 @@
       backdrop-filter: blur(6px);
       background: rgba($colorBlack, 0.75);
     }
+  }
+
+  &--rush-bg {
+    background-image: url('/images/rush-bg.webp');
+    background-size: cover;
+    /* background-position: center top; */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
   }
 }

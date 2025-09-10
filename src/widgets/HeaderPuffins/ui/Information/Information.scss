@@ -51,6 +51,11 @@
     cursor: pointer;
   }
 
+  &__avatar {
+    object-fit: cover;
+    border-radius: 0% 100% 100% 0%;
+  }
+
   &__wrapper {
     padding-top: 2px;
   }

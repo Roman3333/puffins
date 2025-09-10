@@ -28,7 +28,13 @@ export const Popup = (props: PopupProps) => {
         })}
       >
         <div className="puffins-popap__top">
-          <img src={'/images/avatar-popup.png'} width={120} height={120} alt="Avatar" />
+          <img
+            src={'/images/avatar-popup.png'}
+            width={120}
+            height={120}
+            alt="Avatar"
+            className="puffins-popap__avatar"
+          />
 
           <div className="puffins-popap__stat">
             <div className="puffins-popap__name">{'Dmitry CH'}</div>
