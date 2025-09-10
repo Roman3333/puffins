@@ -22,4 +22,20 @@ export interface InputProps
    * Заглавие инпута.
    */
   label?: string;
+  /**
+   * Флаг инпута-поиска, добавляет иконку и логику.
+   */
+  isSearch?: boolean;
+  /**
+   * Тип инпута, по умолчанию primary.
+   */
+  variant?: 'primary' | 'secondary' | 'third';
+  /**
+   * Размер шрифта, по умолчанию m(20/24).
+   */
+  fontSize?: 's' | 'm';
+  /**
+   * Колбек на клик по кнопке.
+   */
+  onClickBtn?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }

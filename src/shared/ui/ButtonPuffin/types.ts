@@ -50,7 +50,9 @@ export interface ButtonProps
     | 'level'
     | 'open'
     | 'grats'
-    | 'ciose';
+    | 'ciose'
+    | 'rush'
+    | 'start';
   /**
    * Font-family title, по умолчанию rowdies.
    */

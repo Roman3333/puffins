@@ -203,6 +203,38 @@
     }
   }
 
+  &.rush {
+    height: 46px;
+    border-radius: 12px;
+    background: linear-gradient(
+      360deg,
+      rgba(40, 90, 192, 0.62) 0%,
+      rgba(57, 144, 226, 0.62) 26.92%,
+      rgba(64, 166, 239, 0.62) 100%
+    );
+    border: 2px solid $colorRushBlue;
+
+    &:hover {
+      background: linear-gradient(
+        360deg,
+        rgba(31, 79, 175, 0.62) 0%,
+        rgba(49, 132, 209, 0.62) 26.92%,
+        rgba(57, 148, 212, 0.62) 100%
+      );
+    }
+  }
+
+  &.start {
+    width: 261px;
+    height: 147px;
+    border-radius: 24px;
+    background-color: $colorGrokGreen;
+
+    &:hover {
+      background-color: $colorPopupGreen;
+    }
+  }
+
   &.img {
     border-radius: 24px;
   }

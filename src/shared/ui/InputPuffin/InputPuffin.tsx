@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { InputProps } from './types';
 import Success from '@/shared/assets/svg/success.svg?react';
 import Error from '@/shared/assets/svg/error.svg?react';
+import Cross from '@/shared/assets/svg/small-cross.svg?react';
 import './InputPuffin.scss';
 
 type TInput = HTMLInputElement;
@@ -18,6 +19,9 @@ export const InputPuffin = forwardRef<TInput, InputProps>((props, ref) => {
     readOnly,
     label,
     message,
+    variant = 'primary',
+    fontSize = 'm',
+    onClickBtn,
     ...rest
   } = props;
 
@@ -29,14 +33,17 @@ export const InputPuffin = forwardRef<TInput, InputProps>((props, ref) => {
         {message && (
           <>
             <p className="input-wrapper__error">{message}</p>
-            <Error width={24} height={24} className="input-wrapper__icon" />
+
+            {variant === 'primary' && (
+              <Error width={24} height={24} className="input-wrapper__icon" />
+            )}
           </>
         )}
       </div>
 
       <input
         ref={ref}
-        className={clsx('input-wrapper__puffin', className, {
+        className={clsx('input-wrapper__puffin', variant, fontSize, className, {
           error: message,
         })}
         name={name}
@@ -45,6 +52,17 @@ export const InputPuffin = forwardRef<TInput, InputProps>((props, ref) => {
         readOnly={readOnly}
         {...rest}
       />
+
+      {(variant === 'secondary' || (variant === 'third' && value)) && (
+        <button
+          className={clsx('input-wrapper__cross', {
+            ['error']: message,
+          })}
+          onClick={onClickBtn}
+        >
+          <Cross className="input-wrapper__cross-icon" />
+        </button>
+      )}
 
       {value && isValueValid && (
         <Success width={24} height={24} className="input-wrapper__icon" />
