@@ -23,7 +23,7 @@ export interface TitleProps extends THeading {
   /**
    * Font-family title, по умолчанию rowdies.
    */
-  font?: 'montserrat' | 'rowdies' | 'play-story';
+  font?: 'montserrat' | 'rowdies' | 'play-story' | 'bowlby';
   /**
    * Font-weight title, по умолчанию bold(700).
    */

@@ -41,6 +41,12 @@ export const Bottom = () => {
   const [customSum, setCustomSum] = useState('0.5');
   const [errorMessage, setErrorMessage] = useState('');
 
+  //TODO: убрать
+  const user = {
+    name: 'Vlad',
+    balans: 0.0175,
+  };
+
   const handleStart = async () => {
     if (isCustom && !customSum.trim()) {
       setErrorMessage('Please enter your custom bet');
@@ -147,7 +153,7 @@ export const Bottom = () => {
 
             <Ethereum />
 
-            <span className="rush-bottom__right-count">{`${0.0175} ETH`}</span>
+            <span className="rush-bottom__right-count">{`${user.balans} ETH`}</span>
 
             <button
               className={clsx('rush-bottom__right-btn', {

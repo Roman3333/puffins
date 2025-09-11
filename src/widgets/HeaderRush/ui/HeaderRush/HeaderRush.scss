@@ -26,4 +26,23 @@
     display: flex;
     gap: 20px;
   }
+
+  &__blur {
+    position: fixed;
+    height: 100svh;
+    inset: 0;
+    transition: all 0.5s;
+    background: transparent;
+    z-index: -30;
+    pointer-events: none;
+    opacity: 0;
+
+    &.active {
+      z-index: 80;
+      pointer-events: all;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(15px);
+    }
+  }
 }
