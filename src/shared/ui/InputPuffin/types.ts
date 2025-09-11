@@ -29,7 +29,7 @@ export interface InputProps
   /**
    * Тип инпута, по умолчанию primary.
    */
-  variant?: 'primary' | 'secondary' | 'third';
+  variant?: 'primary' | 'secondary' | 'search';
   /**
    * Размер шрифта, по умолчанию m(20/24).
    */

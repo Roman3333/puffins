@@ -4,6 +4,7 @@ import { InputProps } from './types';
 import Success from '@/shared/assets/svg/success.svg?react';
 import Error from '@/shared/assets/svg/error.svg?react';
 import Cross from '@/shared/assets/svg/small-cross.svg?react';
+import Search from '@/shared/assets/svg/search.svg?react';
 import './InputPuffin.scss';
 
 type TInput = HTMLInputElement;
@@ -53,7 +54,7 @@ export const InputPuffin = forwardRef<TInput, InputProps>((props, ref) => {
         {...rest}
       />
 
-      {(variant === 'secondary' || (variant === 'third' && value)) && (
+      {(variant === 'secondary' || (variant === 'search' && value)) && (
         <button
           className={clsx('input-wrapper__cross', {
             ['error']: message,
@@ -63,6 +64,8 @@ export const InputPuffin = forwardRef<TInput, InputProps>((props, ref) => {
           <Cross className="input-wrapper__cross-icon" />
         </button>
       )}
+
+      {variant === 'search' && <Search className="input-wrapper__search" />}
 
       {value && isValueValid && (
         <Success width={24} height={24} className="input-wrapper__icon" />

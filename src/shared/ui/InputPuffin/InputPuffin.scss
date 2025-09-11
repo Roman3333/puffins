@@ -30,8 +30,13 @@
       color: $colorWhite;
     }
 
-    &.third {
+    &.search {
+      height: 56px;
+      padding: 0 40px 0 50px;
       border-radius: 16px;
+      background: rgba($colorDarkBlue, 0.16);
+      border: 1px solid rgba($colorWhite, 0.6);
+      color: $colorWhite;
     }
 
     &:focus {
@@ -93,6 +98,13 @@
     &:hover {
       color: $colorNeutralBlue;
     }
+  }
+
+  &__search {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
   }
 }
 
